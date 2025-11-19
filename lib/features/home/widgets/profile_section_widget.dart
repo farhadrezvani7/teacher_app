@@ -22,13 +22,12 @@ class ProfileSectionWidget extends StatelessWidget {
           ),
           Spacer(),
           Container(
-            height: 36,
-            width: 36,
             decoration: BoxDecoration(
               color: Color(0xffFFFFFF),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Assets.images.switchAccount.image(),
+            padding: EdgeInsets.all(8),
+            child: Assets.images.switchAccount.svg(),
           ),
         ],
       ),

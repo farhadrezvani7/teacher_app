@@ -14,7 +14,7 @@ class AppBarChild extends StatelessWidget {
         },
         child: Row(
           children: [
-            Assets.images.arrowLeft.image(),
+            Assets.images.arrowLeft.svg(),
             SizedBox(width: 16),
             Text(
               'Child Status',

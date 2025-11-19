@@ -27,11 +27,17 @@ class BottomNavigationBarWidget extends StatelessWidget {
         mainAxisAlignment: .spaceBetween,
         children: [
           TabBottomNavigationBar(
-            icon: Assets.images.aIconN5.image(),
+            icon: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Assets.images.homeSmileFill.svg(),
+            ),
             isActive: true,
           ),
           TabBottomNavigationBar(
-            icon: Assets.images.timeOut.image(),
+            icon: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Assets.images.aIconN1.svg(),
+            ),
             isActive: false,
           ),
           TabBottomNavigationBar(
@@ -39,11 +45,17 @@ class BottomNavigationBarWidget extends StatelessWidget {
             isActive: false,
           ),
           TabBottomNavigationBar(
-            icon: Assets.images.aIconN4.image(),
+            icon: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Assets.images.chatRoundLineOutline.svg(),
+            ),
             isActive: false,
           ),
           TabBottomNavigationBar(
-            icon: Assets.images.aIconN3.image(),
+            icon: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Assets.images.aIconNSvg.svg(),
+            ),
             isActive: false,
           ),
         ],

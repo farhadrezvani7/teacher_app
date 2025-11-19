@@ -9,7 +9,10 @@
 // ignore_for_file: type=lint
 // ignore_for_file: deprecated_member_use,directives_ordering,implicit_dynamic_list_literal,unnecessary_import
 
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart' as _svg;
+import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
@@ -50,79 +53,68 @@ class $AssetsImagesGen {
         'assets/images/71311088a9687505b49ce50537c803aa86b5242c.jpg',
       );
 
-  /// File path: assets/images/Birthday.png
-  AssetGenImage get birthday =>
-      const AssetGenImage('assets/images/Birthday.png');
+  /// File path: assets/images/Birthday.svg
+  SvgGenImage get birthday => const SvgGenImage('assets/images/Birthday.svg');
 
-  /// File path: assets/images/Cancel.png
-  AssetGenImage get cancel => const AssetGenImage('assets/images/Cancel.png');
+  /// File path: assets/images/Calendar Date.svg
+  SvgGenImage get calendarDate =>
+      const SvgGenImage('assets/images/Calendar Date.svg');
 
-  /// File path: assets/images/Dietary Restrictions.png
-  AssetGenImage get dietaryRestrictions =>
-      const AssetGenImage('assets/images/Dietary Restrictions.png');
+  /// File path: assets/images/Chat Round Line-outline.svg
+  SvgGenImage get chatRoundLineOutline =>
+      const SvgGenImage('assets/images/Chat Round Line-outline.svg');
+
+  /// File path: assets/images/Dietary Restrictions.svg
+  SvgGenImage get dietaryRestrictions =>
+      const SvgGenImage('assets/images/Dietary Restrictions.svg');
+
+  /// File path: assets/images/Done.svg
+  SvgGenImage get done => const SvgGenImage('assets/images/Done.svg');
 
   /// File path: assets/images/Group.png
   AssetGenImage get group => const AssetGenImage('assets/images/Group.png');
 
+  /// File path: assets/images/Home Smile-fill.svg
+  SvgGenImage get homeSmileFill =>
+      const SvgGenImage('assets/images/Home Smile-fill.svg');
+
   /// File path: assets/images/Image.png
   AssetGenImage get image => const AssetGenImage('assets/images/Image.png');
 
-  /// File path: assets/images/Left Slot items.png
-  AssetGenImage get leftSlotItems =>
-      const AssetGenImage('assets/images/Left Slot items.png');
+  /// File path: assets/images/Left Slot items.svg
+  SvgGenImage get leftSlotItems =>
+      const SvgGenImage('assets/images/Left Slot items.svg');
 
-  /// File path: assets/images/Medication.png
-  AssetGenImage get medication =>
-      const AssetGenImage('assets/images/Medication.png');
+  /// File path: assets/images/Medication.svg
+  SvgGenImage get medication =>
+      const SvgGenImage('assets/images/Medication.svg');
 
-  /// File path: assets/images/Next.png
-  AssetGenImage get next => const AssetGenImage('assets/images/Next.png');
+  /// File path: assets/images/Next.svg
+  SvgGenImage get next => const SvgGenImage('assets/images/Next.svg');
 
-  /// File path: assets/images/Subtract.png
-  AssetGenImage get subtract =>
-      const AssetGenImage('assets/images/Subtract.png');
+  /// File path: assets/images/Subtract.svg
+  SvgGenImage get subtract => const SvgGenImage('assets/images/Subtract.svg');
 
-  /// File path: assets/images/Switch account.png
-  AssetGenImage get switchAccount =>
-      const AssetGenImage('assets/images/Switch account.png');
+  /// File path: assets/images/Switch account.svg
+  SvgGenImage get switchAccount =>
+      const SvgGenImage('assets/images/Switch account.svg');
 
-  /// File path: assets/images/Time out.png
-  AssetGenImage get timeOut =>
-      const AssetGenImage('assets/images/Time out.png');
+  /// File path: assets/images/Vector.svg
+  SvgGenImage get vector => const SvgGenImage('assets/images/Vector.svg');
 
-  /// File path: assets/images/Vector.png
-  AssetGenImage get vector => const AssetGenImage('assets/images/Vector.png');
+  /// File path: assets/images/_Icon_N (1).svg
+  SvgGenImage get aIconN1 => const SvgGenImage('assets/images/_Icon_N (1).svg');
 
   /// File path: assets/images/_Icon_N.png
-  AssetGenImage get aIconN => const AssetGenImage('assets/images/_Icon_N.png');
+  AssetGenImage get aIconNPng =>
+      const AssetGenImage('assets/images/_Icon_N.png');
 
-  /// File path: assets/images/_Icon_N2.png
-  AssetGenImage get aIconN2 =>
-      const AssetGenImage('assets/images/_Icon_N2.png');
+  /// File path: assets/images/_Icon_N.svg
+  SvgGenImage get aIconNSvg => const SvgGenImage('assets/images/_Icon_N.svg');
 
-  /// File path: assets/images/_Icon_N3.png
-  AssetGenImage get aIconN3 =>
-      const AssetGenImage('assets/images/_Icon_N3.png');
-
-  /// File path: assets/images/_Icon_N4.png
-  AssetGenImage get aIconN4 =>
-      const AssetGenImage('assets/images/_Icon_N4.png');
-
-  /// File path: assets/images/_Icon_N5.png
-  AssetGenImage get aIconN5 =>
-      const AssetGenImage('assets/images/_Icon_N5.png');
-
-  /// File path: assets/images/_Icon_N6.png
-  AssetGenImage get aIconN6 =>
-      const AssetGenImage('assets/images/_Icon_N6.png');
-
-  /// File path: assets/images/_Icon_N7.png
-  AssetGenImage get aIconN7 =>
-      const AssetGenImage('assets/images/_Icon_N7.png');
-
-  /// File path: assets/images/arrow-left.png
-  AssetGenImage get arrowLeft =>
-      const AssetGenImage('assets/images/arrow-left.png');
+  /// File path: assets/images/arrow-left.svg
+  SvgGenImage get arrowLeft =>
+      const SvgGenImage('assets/images/arrow-left.svg');
 
   /// File path: assets/images/e5b9da75df2419d740dc72fee03a3f789400619c.png
   AssetGenImage get e5b9da75df2419d740dc72fee03a3f789400619c =>
@@ -131,7 +123,7 @@ class $AssetsImagesGen {
       );
 
   /// List of all assets
-  List<AssetGenImage> get values => [
+  List<dynamic> get values => [
     a031e3e91d4e9e9792cce85939482907d0c5dd37c,
     a09b15abd6b0b3b9edc3707eb6674e8f461848c9b,
     a1d12cd0e6cd986b06028a4c782ae201327f0d3b2,
@@ -139,24 +131,22 @@ class $AssetsImagesGen {
     a6fadd07775295cc625abaf33feed2e172cf00a8c,
     a71311088a9687505b49ce50537c803aa86b5242c,
     birthday,
-    cancel,
+    calendarDate,
+    chatRoundLineOutline,
     dietaryRestrictions,
+    done,
     group,
+    homeSmileFill,
     image,
     leftSlotItems,
     medication,
     next,
     subtract,
     switchAccount,
-    timeOut,
     vector,
-    aIconN,
-    aIconN2,
-    aIconN3,
-    aIconN4,
-    aIconN5,
-    aIconN6,
-    aIconN7,
+    aIconN1,
+    aIconNPng,
+    aIconNSvg,
     arrowLeft,
     e5b9da75df2419d740dc72fee03a3f789400619c,
   ];
@@ -254,4 +244,78 @@ class AssetGenImageAnimation {
   final bool isAnimation;
   final Duration duration;
   final int frames;
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = false;
+
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = true;
+
+  final String _assetName;
+  final Size? size;
+  final Set<String> flavors;
+  final bool _isVecFormat;
+
+  _svg.SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    _svg.SvgTheme? theme,
+    _svg.ColorMapper? colorMapper,
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    final _svg.BytesLoader loader;
+    if (_isVecFormat) {
+      loader = _vg.AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
+    } else {
+      loader = _svg.SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+        colorMapper: colorMapper,
+      );
+    }
+    return _svg.SvgPicture(
+      loader,
+      key: key,
+      matchTextDirection: matchTextDirection,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      colorFilter:
+          colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
 }

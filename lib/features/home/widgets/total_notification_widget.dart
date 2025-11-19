@@ -13,7 +13,10 @@ class TotalNotificationWidget extends StatelessWidget {
       children: [
         InfoCardWidget(
           color: Color(0XFFDEF4FF),
-          icon: Assets.images.subtract.image(),
+          icon: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Assets.images.subtract.svg(),
+          ),
           title: '3/10',
           dec: 'Total Children',
           onTap: () {
@@ -26,7 +29,10 @@ class TotalNotificationWidget extends StatelessWidget {
         SizedBox(width: 8),
         InfoCardWidget(
           color: Color(0xffFEE5F2),
-          icon: Assets.images.vector.image(),
+          icon: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Assets.images.vector.svg(),
+          ),
           title: '5',
           dec: 'Notifications',
           onTap: () {},

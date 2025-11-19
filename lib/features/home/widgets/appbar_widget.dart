@@ -31,7 +31,7 @@ class AppbarWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: .spaceBetween,
               children: [
-                Assets.images.leftSlotItems.image(),
+                Assets.images.leftSlotItems.svg(),
                 SizedBox(width: 8),
                 Text(
                   'Toddler 2',

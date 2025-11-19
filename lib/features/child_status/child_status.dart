@@ -118,7 +118,7 @@ class _ChildStatusState extends State<ChildStatus> {
                                         ),
                                         child: Row(
                                           children: [
-                                            Assets.images.aIconN6.image(),
+                                            Assets.images.done.svg(),
                                             SizedBox(width: 4),
                                             Text(
                                               'Present',

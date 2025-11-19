@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.3.2
   swipable_stack: ^2.0.0
+  flutter_svg: ^2.2.1
 
 dev_dependencies:
   flutter_test:
@@ -90,3 +91,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_gen:
+  integrations:
+    flutter_svg: true
