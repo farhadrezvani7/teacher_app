@@ -61,10 +61,6 @@ class $AssetsImagesGen {
   AssetGenImage get dietaryRestrictions =>
       const AssetGenImage('assets/images/Dietary Restrictions.png');
 
-  /// File path: assets/images/Event cards.png
-  AssetGenImage get eventCards =>
-      const AssetGenImage('assets/images/Event cards.png');
-
   /// File path: assets/images/Group.png
   AssetGenImage get group => const AssetGenImage('assets/images/Group.png');
 
@@ -145,7 +141,6 @@ class $AssetsImagesGen {
     birthday,
     cancel,
     dietaryRestrictions,
-    eventCards,
     group,
     image,
     leftSlotItems,
