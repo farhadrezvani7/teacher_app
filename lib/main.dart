@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:teacher_app/features/home/my_home_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
         textTheme: GoogleFonts.interTextTheme(),
       ),
-      home: const MyHomePage(title: 'Teacher App Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
