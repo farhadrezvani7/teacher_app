@@ -17,7 +17,6 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 76,
       decoration: BoxDecoration(
         color: Color(0xffFFFFFF),
         border: Border.all(width: 2, color: Color(0xffFAFAFA)),

@@ -70,7 +70,6 @@ class _ChildStatusState extends State<ChildStatus> {
                           physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (context, index) {
                             return Container(
-                              height: 76,
                               decoration: BoxDecoration(
                                 color: Color(0xffF4F4F5).withValues(alpha: .5),
                                 borderRadius: BorderRadius.circular(16),

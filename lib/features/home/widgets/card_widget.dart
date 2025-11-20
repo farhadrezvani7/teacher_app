@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swipable_stack/swipable_stack.dart';
 import 'package:teacher_app/features/home/widgets/card_item_list_widget.dart';
 import 'package:teacher_app/features/home/widgets/card_notifications_widget.dart';
 import 'package:teacher_app/features/home/widgets/total_notification_widget.dart';
@@ -13,7 +12,6 @@ class CardWidget extends StatefulWidget {
 }
 
 class _CardWidgetState extends State<CardWidget> {
-  final controller = SwipableStackController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,7 +37,7 @@ class _CardWidgetState extends State<CardWidget> {
           SizedBox(height: 12),
           TotalNotificationWidget(),
           SizedBox(height: 32),
-          UpcomingEventsHeaderWidget(controller: controller),
+          UpcomingEventsHeaderWidget(),
           SizedBox(height: 32),
           CardItemListWidget(),
         ],

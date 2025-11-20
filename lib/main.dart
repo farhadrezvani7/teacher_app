@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:teacher_app/features/home/my_home_page.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

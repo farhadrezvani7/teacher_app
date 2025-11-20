@@ -32,12 +32,10 @@ class InfoCardWidget extends StatelessWidget {
               ),
             ],
           ),
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 30),
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 30),
           child: Row(
             children: [
               Container(
-                width: 48,
-                height: 48,
                 decoration: BoxDecoration(
                   color: Color(0xffEFFAFF),
                   borderRadius: BorderRadius.circular(12),

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:swipable_stack/swipable_stack.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:teacher_app/features/home/widgets/event_card.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
 class UpcomingEventsHeaderWidget extends StatelessWidget {
-  const UpcomingEventsHeaderWidget({super.key, required this.controller});
-
-  final SwipableStackController controller;
+  const UpcomingEventsHeaderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final CardSwiperController controller = CardSwiperController();
+
+    // تعداد کارت‌ها
+    final int cardsCount = 3;
     return Column(
       children: [
         Row(
@@ -38,23 +40,19 @@ class UpcomingEventsHeaderWidget extends StatelessWidget {
         ),
         SizedBox(height: 14),
         SizedBox(
-          height: 110,
-          child: SwipableStack(
+          height: 130,
+          child: CardSwiper(
             controller: controller,
-            stackClipBehaviour: Clip.none,
-            allowVerticalSwipe: false,
-            itemCount: 3,
-            builder: (context, properties) {
-              return eventCard(
-                properties.index,
-                properties.stackIndex,
-                context,
-              );
-            },
-            onSwipeCompleted: (index, direction) {},
-            onWillMoveNext: (index, direction) {
-              return false;
-            },
+            cardsCount: cardsCount,
+            cardBuilder:
+                (context, index, percentThresholdX, percentThresholdY) {
+                  int stackIndex = index;
+                  return eventCard(index, stackIndex, context);
+                },
+            numberOfCardsDisplayed: 2,
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            maxAngle: 1,
+            isLoop: true,
           ),
         ),
       ],
