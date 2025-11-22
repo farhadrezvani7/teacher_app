@@ -64,6 +64,9 @@ class $AssetsImagesGen {
   SvgGenImage get chatRoundLineOutline =>
       const SvgGenImage('assets/images/Chat Round Line-outline.svg');
 
+  /// File path: assets/images/Checkbox.svg
+  SvgGenImage get checkbox => const SvgGenImage('assets/images/Checkbox.svg');
+
   /// File path: assets/images/Dietary Restrictions.svg
   SvgGenImage get dietaryRestrictions =>
       const SvgGenImage('assets/images/Dietary Restrictions.svg');
@@ -77,6 +80,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/Home Smile-fill.svg
   SvgGenImage get homeSmileFill =>
       const SvgGenImage('assets/images/Home Smile-fill.svg');
+
+  /// File path: assets/images/Icon Button.svg
+  SvgGenImage get iconButton =>
+      const SvgGenImage('assets/images/Icon Button.svg');
 
   /// File path: assets/images/Image.png
   AssetGenImage get image => const AssetGenImage('assets/images/Image.png');
@@ -95,9 +102,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/Subtract.svg
   SvgGenImage get subtract => const SvgGenImage('assets/images/Subtract.svg');
 
+  /// File path: assets/images/Subtract2.svg
+  SvgGenImage get subtract2 => const SvgGenImage('assets/images/Subtract2.svg');
+
   /// File path: assets/images/Switch account.svg
   SvgGenImage get switchAccount =>
       const SvgGenImage('assets/images/Switch account.svg');
+
+  /// File path: assets/images/Trash.svg
+  SvgGenImage get trash => const SvgGenImage('assets/images/Trash.svg');
 
   /// File path: assets/images/Vector.svg
   SvgGenImage get vector => const SvgGenImage('assets/images/Vector.svg');
@@ -116,6 +129,13 @@ class $AssetsImagesGen {
   SvgGenImage get arrowLeft =>
       const SvgGenImage('assets/images/arrow-left.svg');
 
+  /// File path: assets/images/attachment 2.svg
+  SvgGenImage get attachment2 =>
+      const SvgGenImage('assets/images/attachment 2.svg');
+
+  /// File path: assets/images/checkbox2.svg
+  SvgGenImage get checkbox2 => const SvgGenImage('assets/images/checkbox2.svg');
+
   /// File path: assets/images/e5b9da75df2419d740dc72fee03a3f789400619c.png
   AssetGenImage get e5b9da75df2419d740dc72fee03a3f789400619c =>
       const AssetGenImage(
@@ -133,21 +153,27 @@ class $AssetsImagesGen {
     birthday,
     calendarDate,
     chatRoundLineOutline,
+    checkbox,
     dietaryRestrictions,
     done,
     group,
     homeSmileFill,
+    iconButton,
     image,
     leftSlotItems,
     medication,
     next,
     subtract,
+    subtract2,
     switchAccount,
+    trash,
     vector,
     aIconN1,
     aIconNPng,
     aIconNSvg,
     arrowLeft,
+    attachment2,
+    checkbox2,
     e5b9da75df2419d740dc72fee03a3f789400619c,
   ];
 }

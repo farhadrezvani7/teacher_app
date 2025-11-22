@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'package:teacher_app/features/home/widgets/event_card.dart';
+import 'package:teacher_app/features/home/widgets/upcoming_event_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
 class UpcomingEventsHeaderWidget extends StatelessWidget {
@@ -8,10 +7,6 @@ class UpcomingEventsHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CardSwiperController controller = CardSwiperController();
-
-    // تعداد کارت‌ها
-    final int cardsCount = 3;
     return Column(
       children: [
         Row(
@@ -39,21 +34,19 @@ class UpcomingEventsHeaderWidget extends StatelessWidget {
           ],
         ),
         SizedBox(height: 14),
-        SizedBox(
-          height: 130,
-          child: CardSwiper(
-            controller: controller,
-            cardsCount: cardsCount,
-            cardBuilder:
-                (context, index, percentThresholdX, percentThresholdY) {
-                  int stackIndex = index;
-                  return eventCard(index, stackIndex, context);
-                },
-            numberOfCardsDisplayed: 2,
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            maxAngle: 1,
-            isLoop: true,
-          ),
+        UpcomingEventsCardStackUI(
+          events: [
+            EventUiModel(
+              id: 1,
+              title: "Sports Day",
+              date: DateTime.now().add(Duration(days: 1)),
+            ),
+            EventUiModel(
+              id: 2,
+              title: "Workshop",
+              date: DateTime.now().add(Duration(days: 3)),
+            ),
+          ],
         ),
       ],
     );

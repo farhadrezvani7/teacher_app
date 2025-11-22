@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_app/features/child_status/widgets/appbar_child.dart';
 import 'package:teacher_app/features/child_status/widgets/bottom_navigation_bar_child.dart';
+import 'package:teacher_app/features/child_status/widgets/check_out_widget.dart';
 import 'package:teacher_app/features/home/widgets/background_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
@@ -130,22 +131,35 @@ class _ChildStatusState extends State<ChildStatus> {
                                     ],
                                   ),
                                   Spacer(),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffFFFFFF),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    alignment: .center,
-                                    padding: EdgeInsets.symmetric(
-                                      vertical: 8,
-                                      horizontal: 12,
-                                    ),
-                                    child: Text(
-                                      'Check Out',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xff444349),
+                                  GestureDetector(
+                                    onTap: () {
+                                      showModalBottomSheet(
+                                        context: context,
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        useSafeArea: true,
+                                        builder: (context) {
+                                          return CheckOutWidget();
+                                        },
+                                      );
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xffFFFFFF),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      alignment: .center,
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: 8,
+                                        horizontal: 12,
+                                      ),
+                                      child: Text(
+                                        'Check Out',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0xff444349),
+                                        ),
                                       ),
                                     ),
                                   ),
