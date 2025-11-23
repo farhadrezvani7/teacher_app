@@ -140,7 +140,7 @@ class _UpcomingEventsCardStackUIState extends State<UpcomingEventsCardStackUI> {
                             vertical: 6,
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.8),
+                            color: Colors.white.withValues(alpha: .8),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Row(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_app/features/child_status/widgets/attach_photo_widget.dart';
+import 'package:teacher_app/features/child_status/widgets/header_check_out_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
 class CheckOutWidget extends StatefulWidget {
@@ -16,7 +17,7 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
   void initState() {
     super.initState();
 
-    // وقتی کیبورد باز/بسته شود، اسکرول اتوماتیک انجام بده
+    // وقتی کیبورد باز/بسته شود، اسکرول اتوماتیک انجام می شود
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // لیسنر تغییر اندازه صفحه (کیبورد)
       WidgetsBinding.instance.addObserver(
@@ -58,7 +59,7 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
         ),
         child: Column(
           children: [
-            HeaderCheckOut(),
+            HeaderCheckOut(isIcon: true, title: 'Check Out'),
             Divider(color: Color(0xffDBDADD)),
 
             Padding(
@@ -266,9 +267,7 @@ class _NoteWidgetState extends State<NoteWidget> {
               expands: true,
               maxLines: null,
               minLines: null,
-              onEditingComplete: () {
-                print("Editing completed");
-              },
+              onEditingComplete: () {},
               decoration: InputDecoration(
                 hintText: 'Placeholder',
                 filled: true,
@@ -283,38 +282,6 @@ class _NoteWidgetState extends State<NoteWidget> {
           ),
         ),
       ],
-    );
-  }
-}
-
-class HeaderCheckOut extends StatelessWidget {
-  const HeaderCheckOut({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 16),
-      child: Row(
-        children: [
-          Assets.images.subtract2.svg(),
-          SizedBox(width: 8),
-          Text(
-            'Check Out',
-            style: TextStyle(
-              color: Color(0xff6D6B76),
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          Spacer(),
-          GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Assets.images.iconButton.svg(),
-          ),
-        ],
-      ),
     );
   }
 }

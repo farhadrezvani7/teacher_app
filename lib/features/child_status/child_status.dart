@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:teacher_app/features/child_status/widgets/appbar_child.dart';
 import 'package:teacher_app/features/child_status/widgets/bottom_navigation_bar_child.dart';
 import 'package:teacher_app/features/child_status/widgets/check_out_widget.dart';
+import 'package:teacher_app/features/child_status/widgets/more_details_widget.dart';
 import 'package:teacher_app/features/home/widgets/background_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
@@ -133,15 +134,27 @@ class _ChildStatusState extends State<ChildStatus> {
                                   Spacer(),
                                   GestureDetector(
                                     onTap: () {
-                                      showModalBottomSheet(
-                                        context: context,
-                                        isScrollControlled: true,
-                                        backgroundColor: Colors.transparent,
-                                        useSafeArea: true,
-                                        builder: (context) {
-                                          return CheckOutWidget();
-                                        },
-                                      );
+                                      if (index == 0) {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          isScrollControlled: true,
+                                          backgroundColor: Colors.transparent,
+                                          useSafeArea: true,
+                                          builder: (context) {
+                                            return CheckOutWidget();
+                                          },
+                                        );
+                                      } else if (index == 1) {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          isScrollControlled: true,
+                                          backgroundColor: Colors.transparent,
+                                          useSafeArea: true,
+                                          builder: (context) {
+                                            return MoreDetailsWidget();
+                                          },
+                                        );
+                                      }
                                     },
                                     child: Container(
                                       decoration: BoxDecoration(
