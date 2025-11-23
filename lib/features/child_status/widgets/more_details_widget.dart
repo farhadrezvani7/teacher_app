@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/features/child_status/widgets/add_note_widget.dart';
 import 'package:teacher_app/features/child_status/widgets/header_check_out_widget.dart';
+import 'package:teacher_app/features/child_status/widgets/transfer_class_widget.dart';
 
 class MoreDetailsWidget extends StatelessWidget {
   const MoreDetailsWidget({super.key});
@@ -30,34 +32,60 @@ class MoreDetailsWidget extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: Container(
-                width: double.infinity,
-                height: 48,
-                color: Colors.transparent,
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Add Note',
-                  style: TextStyle(
-                    color: Color(0xff444349),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    useSafeArea: true,
+                    builder: (context) {
+                      return AddNoteWidget();
+                    },
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 48,
+                  color: Colors.transparent,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Add Note',
+                    style: TextStyle(
+                      color: Color(0xff444349),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32),
-              child: Container(
-                width: double.infinity,
-                height: 48,
-                color: Colors.transparent,
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Transfer Class',
-                  style: TextStyle(
-                    color: Color(0xff444349),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+              child: GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    useSafeArea: true,
+                    builder: (context) {
+                      return TransferClassWidget();
+                    },
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 48,
+                  color: Colors.transparent,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Transfer Class',
+                    style: TextStyle(
+                      color: Color(0xff444349),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),

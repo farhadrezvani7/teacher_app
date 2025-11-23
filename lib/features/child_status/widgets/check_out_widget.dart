@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/core/widgets/button_widget.dart';
+import 'package:teacher_app/core/widgets/lifecycle_event_handler.dart';
 import 'package:teacher_app/features/child_status/widgets/attach_photo_widget.dart';
 import 'package:teacher_app/features/child_status/widgets/header_check_out_widget.dart';
+import 'package:teacher_app/features/child_status/widgets/note_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
 class CheckOutWidget extends StatefulWidget {
@@ -193,26 +196,11 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                   SizedBox(height: 20),
                   AttachPhotoWidget(),
                   SizedBox(height: 32),
-                  GestureDetector(
+                  ButtonWidget(
+                    title: 'Submit',
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Container(
-                      height: 56,
-                      decoration: BoxDecoration(
-                        color: Color(0xff9C5CFF),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      alignment: .center,
-                      child: Text(
-                        'Submit',
-                        style: TextStyle(
-                          color: Color(0xffFAFAFA),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
                   ),
                 ],
               ),
@@ -221,79 +209,5 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
         ),
       ),
     );
-  }
-}
-
-class NoteWidget extends StatefulWidget {
-  const NoteWidget({super.key});
-
-  @override
-  State<NoteWidget> createState() => _NoteWidgetState();
-}
-
-class _NoteWidgetState extends State<NoteWidget> {
-  final TextEditingController _controller = TextEditingController();
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: .start,
-      children: [
-        Text(
-          'Note',
-          style: TextStyle(
-            color: Color(0xff444349),
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        SizedBox(height: 8),
-        ClipRRect(
-          borderRadius: BorderRadiusGeometry.circular(6),
-          child: Container(
-            height: 80,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 2,
-                  offset: Offset(0, 1),
-                  color: Color(0xff000000).withValues(alpha: .05),
-                ),
-              ],
-            ),
-            child: TextFormField(
-              controller: _controller,
-              keyboardType: TextInputType.multiline,
-              textInputAction: TextInputAction.newline,
-              expands: true,
-              maxLines: null,
-              minLines: null,
-              onEditingComplete: () {},
-              decoration: InputDecoration(
-                hintText: 'Placeholder',
-                filled: true,
-                fillColor: Color(0xffF7F7F8),
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 8,
-                  horizontal: 12,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// کلاس کمکی برای گوش دادن به تغییرات کیبورد
-class LifecycleEventHandler extends WidgetsBindingObserver {
-  final Function onMetricsChanged;
-
-  LifecycleEventHandler({required this.onMetricsChanged});
-
-  @override
-  void didChangeMetrics() {
-    onMetricsChanged();
   }
 }
