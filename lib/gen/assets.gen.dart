@@ -120,6 +120,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/Time out.svg
   SvgGenImage get timeOut => const SvgGenImage('assets/images/Time out.svg');
 
+  /// File path: assets/images/TimeIn.svg
+  SvgGenImage get timeIn => const SvgGenImage('assets/images/TimeIn.svg');
+
+  /// File path: assets/images/Timeout.svg
+  SvgGenImage get timeout => const SvgGenImage('assets/images/Timeout.svg');
+
   /// File path: assets/images/Trash.svg
   SvgGenImage get trash => const SvgGenImage('assets/images/Trash.svg');
 
@@ -187,6 +193,8 @@ class $AssetsImagesGen {
     subtract2,
     switchAccount,
     timeOut,
+    timeIn,
+    timeout,
     trash,
     vector,
     xFill,

@@ -4,6 +4,7 @@ import 'package:teacher_app/features/home/widgets/background_widget.dart';
 import 'package:teacher_app/features/home/widgets/bottom_navigation_bar_widget.dart';
 import 'package:teacher_app/features/home/widgets/card_widget.dart';
 import 'package:teacher_app/features/home/widgets/profile_section_widget.dart';
+import 'package:teacher_app/features/time_screen/time_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -37,6 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             );
+          } else if (value == 1) {
+            return TimeScreen();
           } else {
             return Container();
           }
