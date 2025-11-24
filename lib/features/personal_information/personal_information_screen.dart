@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_app/features/home/widgets/background_widget.dart';
 import 'package:teacher_app/features/home/widgets/upcoming_events_header_widget.dart';
+import 'package:teacher_app/features/personal_information/widgets/day_strip_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
 class PersonalInformationScreen extends StatelessWidget {
@@ -95,85 +96,7 @@ class PersonalInformationScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 16),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 6),
-                          child: Row(
-                            mainAxisAlignment: .center,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(8),
-                                alignment: .center,
-                                child: Assets.images.altArrowLeft.svg(),
-                              ),
-                              SizedBox(width: 8),
-                              Text(
-                                'Thursday',
-                                style: TextStyle(
-                                  color: Color(0xff7B2AF3),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                'July 16',
-                                style: TextStyle(
-                                  color: Color(0xff444349),
-                                  fontSize: 14,
-                                  fontWeight: .w400,
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(8),
-                                alignment: .center,
-                                child: Assets.images.altArrowRight.svg(),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 80,
-                          child: ListView.builder(
-                            itemCount: 10,
-                            shrinkWrap: true,
-                            scrollDirection: .horizontal,
-                            itemBuilder: (context, index) {
-                              return Container(
-                                decoration: BoxDecoration(
-                                  color: Color(0xff9C5CFF),
-                                  borderRadius: BorderRadius.circular(9999),
-                                ),
-                                padding: EdgeInsets.symmetric(horizontal: 8),
-                                margin: EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 8,
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: .center,
-                                  children: [
-                                    Text(
-                                      '15',
-                                      style: TextStyle(
-                                        color: Color(0xffFAFAFA),
-                                        fontSize: 12,
-                                        fontWeight: .w700,
-                                      ),
-                                    ),
-                                    Text(
-                                      'wed',
-                                      style: TextStyle(
-                                        color: Color(0xffFAFAFA),
-                                        fontSize: 12,
-                                        fontWeight: .w700,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            },
-                          ),
-                        ),
+                        DayStripWidget(),
                         Container(
                           decoration: BoxDecoration(
                             color: Color(0xffFFFFFF).withValues(alpha: .7),
