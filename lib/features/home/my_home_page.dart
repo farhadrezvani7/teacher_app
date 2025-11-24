@@ -10,27 +10,37 @@ class MyHomePage extends StatefulWidget {
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
+  static ValueNotifier<int> pageIndex = ValueNotifier(0);
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          BackgroundWidget(),
-          SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  AppbarWidget(),
-                  ProfileSectionWidget(),
-                  CardWidget(),
-                ],
-              ),
-            ),
-          ),
-        ],
+      body: ValueListenableBuilder(
+        valueListenable: MyHomePage.pageIndex,
+        builder: (context, value, child) {
+          if (value == 0) {
+            return Stack(
+              children: [
+                BackgroundWidget(),
+                SafeArea(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        AppbarWidget(),
+                        ProfileSectionWidget(),
+                        CardWidget(),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            );
+          } else {
+            return Container();
+          }
+        },
       ),
       bottomNavigationBar: BottomNavigationBarWidget(),
     );

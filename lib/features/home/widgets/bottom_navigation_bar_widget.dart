@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/features/home/my_home_page.dart';
 import 'package:teacher_app/features/home/widgets/tab_bottom_navigation_bar.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
@@ -23,42 +24,83 @@ class BottomNavigationBarWidget extends StatelessWidget {
         ],
       ),
       padding: EdgeInsets.fromLTRB(16, 12, 16, 24),
-      child: Row(
-        mainAxisAlignment: .spaceBetween,
-        children: [
-          TabBottomNavigationBar(
-            icon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Assets.images.homeSmileFill.svg(),
-            ),
-            isActive: true,
-          ),
-          TabBottomNavigationBar(
-            icon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Assets.images.aIconN1.svg(),
-            ),
-            isActive: false,
-          ),
-          TabBottomNavigationBar(
-            icon: Assets.images.group.image(),
-            isActive: false,
-          ),
-          TabBottomNavigationBar(
-            icon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Assets.images.chatRoundLineOutline.svg(),
-            ),
-            isActive: false,
-          ),
-          TabBottomNavigationBar(
-            icon: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Assets.images.aIconNSvg.svg(),
-            ),
-            isActive: false,
-          ),
-        ],
+      child: ValueListenableBuilder(
+        valueListenable: MyHomePage.pageIndex,
+        builder: (context, value, child) {
+          return Row(
+            mainAxisAlignment: .spaceBetween,
+            children: [
+              TabBottomNavigationBar(
+                icon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      MyHomePage.pageIndex.value = 0;
+                    },
+                    child: value == 0
+                        ? Assets.images.homeSmileFill.svg()
+                        : Assets.images.homeSmileOutline.svg(),
+                  ),
+                ),
+                isActive: value == 0 ? true : false,
+              ),
+              TabBottomNavigationBar(
+                icon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      MyHomePage.pageIndex.value = 1;
+                    },
+                    child: value == 1
+                        ? Assets.images.timeOut.svg()
+                        : Assets.images.aIconN1.svg(),
+                  ),
+                ),
+                isActive: value == 1 ? true : false,
+              ),
+              TabBottomNavigationBar(
+                icon: GestureDetector(
+                  onTap: () {
+                    MyHomePage.pageIndex.value = 2;
+                  },
+                  child: value == 2
+                      ? Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Assets.images.xFill.svg(),
+                        )
+                      : Assets.images.group.image(),
+                ),
+                isActive: value == 2 ? true : false,
+              ),
+              TabBottomNavigationBar(
+                icon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      MyHomePage.pageIndex.value = 3;
+                    },
+                    child: value == 3
+                        ? Assets.images.chatRoundLineFill.svg()
+                        : Assets.images.chatRoundLineOutline.svg(),
+                  ),
+                ),
+                isActive: value == 3 ? true : false,
+              ),
+              TabBottomNavigationBar(
+                icon: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      MyHomePage.pageIndex.value = 4;
+                    },
+                    child: Assets.images.aIconNSvg.svg(),
+                  ),
+                ),
+                isActive: value == 4 ? true : false,
+              ),
+            ],
+          );
+        },
       ),
     );
   }

@@ -60,6 +60,10 @@ class $AssetsImagesGen {
   SvgGenImage get calendarDate =>
       const SvgGenImage('assets/images/Calendar Date.svg');
 
+  /// File path: assets/images/Chat Round Line-fill.svg
+  SvgGenImage get chatRoundLineFill =>
+      const SvgGenImage('assets/images/Chat Round Line-fill.svg');
+
   /// File path: assets/images/Chat Round Line-outline.svg
   SvgGenImage get chatRoundLineOutline =>
       const SvgGenImage('assets/images/Chat Round Line-outline.svg');
@@ -80,6 +84,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/Home Smile-fill.svg
   SvgGenImage get homeSmileFill =>
       const SvgGenImage('assets/images/Home Smile-fill.svg');
+
+  /// File path: assets/images/Home Smile-outline.svg
+  SvgGenImage get homeSmileOutline =>
+      const SvgGenImage('assets/images/Home Smile-outline.svg');
 
   /// File path: assets/images/Icon Button.svg
   SvgGenImage get iconButton =>
@@ -109,11 +117,17 @@ class $AssetsImagesGen {
   SvgGenImage get switchAccount =>
       const SvgGenImage('assets/images/Switch account.svg');
 
+  /// File path: assets/images/Time out.svg
+  SvgGenImage get timeOut => const SvgGenImage('assets/images/Time out.svg');
+
   /// File path: assets/images/Trash.svg
   SvgGenImage get trash => const SvgGenImage('assets/images/Trash.svg');
 
   /// File path: assets/images/Vector.svg
   SvgGenImage get vector => const SvgGenImage('assets/images/Vector.svg');
+
+  /// File path: assets/images/X-fill.svg
+  SvgGenImage get xFill => const SvgGenImage('assets/images/X-fill.svg');
 
   /// File path: assets/images/_Icon_N (1).svg
   SvgGenImage get aIconN1 => const SvgGenImage('assets/images/_Icon_N (1).svg');
@@ -132,6 +146,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/attachment 2.svg
   SvgGenImage get attachment2 =>
       const SvgGenImage('assets/images/attachment 2.svg');
+
+  /// File path: assets/images/background_upcoming.png
+  AssetGenImage get backgroundUpcoming =>
+      const AssetGenImage('assets/images/background_upcoming.png');
 
   /// File path: assets/images/checkbox2.svg
   SvgGenImage get checkbox2 => const SvgGenImage('assets/images/checkbox2.svg');
@@ -152,12 +170,14 @@ class $AssetsImagesGen {
     a71311088a9687505b49ce50537c803aa86b5242c,
     birthday,
     calendarDate,
+    chatRoundLineFill,
     chatRoundLineOutline,
     checkbox,
     dietaryRestrictions,
     done,
     group,
     homeSmileFill,
+    homeSmileOutline,
     iconButton,
     image,
     leftSlotItems,
@@ -166,13 +186,16 @@ class $AssetsImagesGen {
     subtract,
     subtract2,
     switchAccount,
+    timeOut,
     trash,
     vector,
+    xFill,
     aIconN1,
     aIconNPng,
     aIconNSvg,
     arrowLeft,
     attachment2,
+    backgroundUpcoming,
     checkbox2,
     e5b9da75df2419d740dc72fee03a3f789400619c,
   ];

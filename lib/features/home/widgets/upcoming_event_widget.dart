@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+import 'package:teacher_app/gen/assets.gen.dart';
 
 class UpcomingEventsCardStackUI extends StatefulWidget {
   final List<EventUiModel> events;
@@ -111,77 +111,78 @@ class _UpcomingEventsCardStackUIState extends State<UpcomingEventsCardStackUI> {
                     width: bigCardWidth,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      image: const DecorationImage(
-                        image: AssetImage(
-                          "assets/images/background_upcoming.png",
-                        ),
-                        fit: BoxFit.cover,
-                      ),
                     ),
                     padding: const EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Stack(
                       children: [
-                        Text(
-                          selectedEvent.title ?? "-",
-                          maxLines: 1,
-                          softWrap: false,
-                          overflow: TextOverflow.clip,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
+                        ClipRRect(
+                          borderRadius: BorderRadiusGeometry.circular(16),
+                          child: Assets.images.backgroundUpcoming.image(
+                            fit: BoxFit.cover,
                           ),
                         ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 6,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withValues(alpha: .8),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Row(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/images/ic_calendar.svg',
-                                width: 16,
-                                height: 16,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedEvent.title ?? "-",
+                              maxLines: 1,
+                              softWrap: false,
+                              overflow: TextOverflow.clip,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
                               ),
-                              const SizedBox(width: 6),
-                              Expanded(
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: List.generate(dateParts.length, (
-                                    i,
-                                  ) {
-                                    return Row(
-                                      children: [
-                                        Text(
-                                          dateParts[i],
-                                          style: const TextStyle(
-                                            fontSize: 11,
-                                            color: Colors.black87,
-                                          ),
-                                        ),
-                                        if (i != dateParts.length - 1)
-                                          Container(
-                                            width: 1,
-                                            height: 16,
-                                            color: Colors.grey[400],
-                                            margin: const EdgeInsets.symmetric(
-                                              horizontal: 6,
+                            ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 6,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: .8),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Row(
+                                children: [
+                                  Assets.images.calendarDate.svg(),
+                                  const SizedBox(width: 6),
+                                  Expanded(
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: List.generate(dateParts.length, (
+                                        i,
+                                      ) {
+                                        return Row(
+                                          children: [
+                                            Text(
+                                              dateParts[i],
+                                              style: const TextStyle(
+                                                fontSize: 11,
+                                                color: Colors.black87,
+                                              ),
                                             ),
-                                          ),
-                                      ],
-                                    );
-                                  }),
-                                ),
+                                            if (i != dateParts.length - 1)
+                                              Container(
+                                                width: 1,
+                                                height: 16,
+                                                color: Colors.grey[400],
+                                                margin:
+                                                    const EdgeInsets.symmetric(
+                                                      horizontal: 6,
+                                                    ),
+                                              ),
+                                          ],
+                                        );
+                                      }),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
