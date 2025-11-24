@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/features/personal_information/personal_information_screen.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
 
 class ProfileSectionWidget extends StatelessWidget {
@@ -21,13 +22,23 @@ class ProfileSectionWidget extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Container(
-            decoration: BoxDecoration(
-              color: Color(0xffFFFFFF),
-              borderRadius: BorderRadius.circular(8),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PersonalInformationScreen(),
+                ),
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Color(0xffFFFFFF),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: EdgeInsets.all(8),
+              child: Assets.images.switchAccount.svg(),
             ),
-            padding: EdgeInsets.all(8),
-            child: Assets.images.switchAccount.svg(),
           ),
         ],
       ),

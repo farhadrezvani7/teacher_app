@@ -21,13 +21,18 @@ class AppbarWidget extends StatelessWidget {
           ),
 
           Container(
-            height: 36,
             decoration: BoxDecoration(
-              color: Color(0xffF0E7FF),
+              color: Color(0xffFFFFFF).withValues(alpha: .4),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(width: 2, color: Color(0xffFAFAFA)),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 8,
+                  color: Color(0xffE4D3FF).withValues(alpha: .5),
+                ),
+              ],
             ),
-            padding: EdgeInsets.symmetric(horizontal: 14),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Row(
               mainAxisAlignment: .spaceBetween,
               children: [

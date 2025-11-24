@@ -53,6 +53,18 @@ class $AssetsImagesGen {
         'assets/images/71311088a9687505b49ce50537c803aa86b5242c.jpg',
       );
 
+  /// File path: assets/images/Alt Arrow Left.svg
+  SvgGenImage get altArrowLeft =>
+      const SvgGenImage('assets/images/Alt Arrow Left.svg');
+
+  /// File path: assets/images/Alt Arrow Right.svg
+  SvgGenImage get altArrowRight =>
+      const SvgGenImage('assets/images/Alt Arrow Right.svg');
+
+  /// File path: assets/images/Arrow Right.svg
+  SvgGenImage get arrowRight =>
+      const SvgGenImage('assets/images/Arrow Right.svg');
+
   /// File path: assets/images/Birthday.svg
   SvgGenImage get birthday => const SvgGenImage('assets/images/Birthday.svg');
 
@@ -70,6 +82,12 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/Checkbox.svg
   SvgGenImage get checkbox => const SvgGenImage('assets/images/Checkbox.svg');
+
+  /// File path: assets/images/Checkin.svg
+  SvgGenImage get checkin => const SvgGenImage('assets/images/Checkin.svg');
+
+  /// File path: assets/images/Checkout.svg
+  SvgGenImage get checkout => const SvgGenImage('assets/images/Checkout.svg');
 
   /// File path: assets/images/Dietary Restrictions.svg
   SvgGenImage get dietaryRestrictions =>
@@ -100,12 +118,19 @@ class $AssetsImagesGen {
   SvgGenImage get leftSlotItems =>
       const SvgGenImage('assets/images/Left Slot items.svg');
 
+  /// File path: assets/images/Mailbox.svg
+  SvgGenImage get mailbox => const SvgGenImage('assets/images/Mailbox.svg');
+
   /// File path: assets/images/Medication.svg
   SvgGenImage get medication =>
       const SvgGenImage('assets/images/Medication.svg');
 
   /// File path: assets/images/Next.svg
   SvgGenImage get next => const SvgGenImage('assets/images/Next.svg');
+
+  /// File path: assets/images/Phone Rounded.svg
+  SvgGenImage get phoneRounded =>
+      const SvgGenImage('assets/images/Phone Rounded.svg');
 
   /// File path: assets/images/Subtract.svg
   SvgGenImage get subtract => const SvgGenImage('assets/images/Subtract.svg');
@@ -149,6 +174,10 @@ class $AssetsImagesGen {
   SvgGenImage get arrowLeft =>
       const SvgGenImage('assets/images/arrow-left.svg');
 
+  /// File path: assets/images/arrow-left2.svg
+  SvgGenImage get arrowLeft2 =>
+      const SvgGenImage('assets/images/arrow-left2.svg');
+
   /// File path: assets/images/attachment 2.svg
   SvgGenImage get attachment2 =>
       const SvgGenImage('assets/images/attachment 2.svg');
@@ -174,11 +203,16 @@ class $AssetsImagesGen {
     a5332d31ac6cdbd6a5bfb62d59baefb6fb1383890,
     a6fadd07775295cc625abaf33feed2e172cf00a8c,
     a71311088a9687505b49ce50537c803aa86b5242c,
+    altArrowLeft,
+    altArrowRight,
+    arrowRight,
     birthday,
     calendarDate,
     chatRoundLineFill,
     chatRoundLineOutline,
     checkbox,
+    checkin,
+    checkout,
     dietaryRestrictions,
     done,
     group,
@@ -187,8 +221,10 @@ class $AssetsImagesGen {
     iconButton,
     image,
     leftSlotItems,
+    mailbox,
     medication,
     next,
+    phoneRounded,
     subtract,
     subtract2,
     switchAccount,
@@ -202,6 +238,7 @@ class $AssetsImagesGen {
     aIconNPng,
     aIconNSvg,
     arrowLeft,
+    arrowLeft2,
     attachment2,
     backgroundUpcoming,
     checkbox2,
