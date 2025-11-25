@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/features/child_profile/child_profile_screen.dart';
 import 'package:teacher_app/features/child_status/widgets/appbar_child.dart';
 import 'package:teacher_app/features/child_status/widgets/bottom_navigation_bar_child.dart';
 import 'package:teacher_app/features/child_status/widgets/check_out_widget.dart';
@@ -153,6 +154,14 @@ class _ChildStatusState extends State<ChildStatus> {
                                           builder: (context) {
                                             return MoreDetailsWidget();
                                           },
+                                        );
+                                      } else if (index == 2) {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                ChildProfileScreen(),
+                                          ),
                                         );
                                       }
                                     },

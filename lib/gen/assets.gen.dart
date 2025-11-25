@@ -68,6 +68,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/Birthday.svg
   SvgGenImage get birthday => const SvgGenImage('assets/images/Birthday.svg');
 
+  /// File path: assets/images/Breakfast.svg
+  SvgGenImage get breakfast => const SvgGenImage('assets/images/Breakfast.svg');
+
   /// File path: assets/images/Calendar Date.svg
   SvgGenImage get calendarDate =>
       const SvgGenImage('assets/images/Calendar Date.svg');
@@ -96,6 +99,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/Done.svg
   SvgGenImage get done => const SvgGenImage('assets/images/Done.svg');
 
+  /// File path: assets/images/Gift.svg
+  SvgGenImage get gift => const SvgGenImage('assets/images/Gift.svg');
+
   /// File path: assets/images/Group.png
   AssetGenImage get group => const AssetGenImage('assets/images/Group.png');
 
@@ -118,6 +124,9 @@ class $AssetsImagesGen {
   SvgGenImage get leftSlotItems =>
       const SvgGenImage('assets/images/Left Slot items.svg');
 
+  /// File path: assets/images/Lunch.svg
+  SvgGenImage get lunch => const SvgGenImage('assets/images/Lunch.svg');
+
   /// File path: assets/images/Mailbox.svg
   SvgGenImage get mailbox => const SvgGenImage('assets/images/Mailbox.svg');
 
@@ -131,6 +140,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/Phone Rounded.svg
   SvgGenImage get phoneRounded =>
       const SvgGenImage('assets/images/Phone Rounded.svg');
+
+  /// File path: assets/images/Snack.svg
+  SvgGenImage get snack => const SvgGenImage('assets/images/Snack.svg');
 
   /// File path: assets/images/Subtract.svg
   SvgGenImage get subtract => const SvgGenImage('assets/images/Subtract.svg');
@@ -186,6 +198,9 @@ class $AssetsImagesGen {
   AssetGenImage get backgroundUpcoming =>
       const AssetGenImage('assets/images/background_upcoming.png');
 
+  /// File path: assets/images/bottle.svg
+  SvgGenImage get bottle => const SvgGenImage('assets/images/bottle.svg');
+
   /// File path: assets/images/checkbox2.svg
   SvgGenImage get checkbox2 => const SvgGenImage('assets/images/checkbox2.svg');
 
@@ -194,6 +209,9 @@ class $AssetsImagesGen {
       const AssetGenImage(
         'assets/images/e5b9da75df2419d740dc72fee03a3f789400619c.png',
       );
+
+  /// File path: assets/images/nap.svg
+  SvgGenImage get nap => const SvgGenImage('assets/images/nap.svg');
 
   /// List of all assets
   List<dynamic> get values => [
@@ -207,6 +225,7 @@ class $AssetsImagesGen {
     altArrowRight,
     arrowRight,
     birthday,
+    breakfast,
     calendarDate,
     chatRoundLineFill,
     chatRoundLineOutline,
@@ -215,16 +234,19 @@ class $AssetsImagesGen {
     checkout,
     dietaryRestrictions,
     done,
+    gift,
     group,
     homeSmileFill,
     homeSmileOutline,
     iconButton,
     image,
     leftSlotItems,
+    lunch,
     mailbox,
     medication,
     next,
     phoneRounded,
+    snack,
     subtract,
     subtract2,
     switchAccount,
@@ -241,8 +263,10 @@ class $AssetsImagesGen {
     arrowLeft2,
     attachment2,
     backgroundUpcoming,
+    bottle,
     checkbox2,
     e5b9da75df2419d740dc72fee03a3f789400619c,
+    nap,
   ];
 }
 

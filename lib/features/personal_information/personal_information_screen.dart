@@ -89,6 +89,7 @@ class PersonalInformationScreen extends StatelessWidget {
                       ),
                       boxShadow: [
                         BoxShadow(
+                          offset: Offset(0, -4),
                           blurRadius: 16,
                           color: Color(0xff000000).withValues(alpha: .1),
                         ),
