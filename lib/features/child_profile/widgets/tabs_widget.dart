@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 class SmoothTabs extends StatefulWidget {
   final ValueChanged<int>? onChange; // اضافه شد
 
-  const SmoothTabs({
-    super.key,
-    this.onChange,
-  });
+  const SmoothTabs({super.key, this.onChange});
 
   @override
   State<SmoothTabs> createState() => _SmoothTabsState();
@@ -55,7 +52,7 @@ class _SmoothTabsState extends State<SmoothTabs> {
                       BoxShadow(
                         color: const Color(0xffBAB9C0).withValues(alpha: .5),
                         blurRadius: 4,
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -66,6 +63,7 @@ class _SmoothTabsState extends State<SmoothTabs> {
                 children: [
                   Expanded(
                     child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
                       onTap: () => _setTab(0),
                       child: Center(
                         child: Text(
@@ -75,8 +73,7 @@ class _SmoothTabsState extends State<SmoothTabs> {
                             fontWeight: FontWeight.w500,
                             color: current == 0
                                 ? const Color(0xff7B2AF3)
-                                : const Color(0xff71717A)
-                                    .withValues(alpha: .8),
+                                : const Color(0xff71717A).withValues(alpha: .8),
                           ),
                         ),
                       ),
@@ -84,6 +81,7 @@ class _SmoothTabsState extends State<SmoothTabs> {
                   ),
                   Expanded(
                     child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
                       onTap: () => _setTab(1),
                       child: Center(
                         child: Text(
@@ -93,8 +91,7 @@ class _SmoothTabsState extends State<SmoothTabs> {
                             fontWeight: FontWeight.w500,
                             color: current == 1
                                 ? const Color(0xff7B2AF3)
-                                : const Color(0xff71717A)
-                                    .withValues(alpha: .8),
+                                : const Color(0xff71717A).withValues(alpha: .8),
                           ),
                         ),
                       ),

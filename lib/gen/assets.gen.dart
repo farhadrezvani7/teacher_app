@@ -53,6 +53,9 @@ class $AssetsImagesGen {
         'assets/images/71311088a9687505b49ce50537c803aa86b5242c.jpg',
       );
 
+  /// File path: assets/images/Allergy.svg
+  SvgGenImage get allergy => const SvgGenImage('assets/images/Allergy.svg');
+
   /// File path: assets/images/Alt Arrow Left.svg
   SvgGenImage get altArrowLeft =>
       const SvgGenImage('assets/images/Alt Arrow Left.svg');
@@ -99,6 +102,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/Done.svg
   SvgGenImage get done => const SvgGenImage('assets/images/Done.svg');
 
+  /// File path: assets/images/Emergency Contacts.svg
+  SvgGenImage get emergencyContacts =>
+      const SvgGenImage('assets/images/Emergency Contacts.svg');
+
   /// File path: assets/images/Gift.svg
   SvgGenImage get gift => const SvgGenImage('assets/images/Gift.svg');
 
@@ -140,6 +147,18 @@ class $AssetsImagesGen {
   /// File path: assets/images/Phone Rounded.svg
   SvgGenImage get phoneRounded =>
       const SvgGenImage('assets/images/Phone Rounded.svg');
+
+  /// File path: assets/images/Phone Rounded2.svg
+  SvgGenImage get phoneRounded2 =>
+      const SvgGenImage('assets/images/Phone Rounded2.svg');
+
+  /// File path: assets/images/Physical Requirements.svg
+  SvgGenImage get physicalRequirements =>
+      const SvgGenImage('assets/images/Physical Requirements.svg');
+
+  /// File path: assets/images/Reportable Diseases.svg
+  SvgGenImage get reportableDiseases =>
+      const SvgGenImage('assets/images/Reportable Diseases.svg');
 
   /// File path: assets/images/Snack.svg
   SvgGenImage get snack => const SvgGenImage('assets/images/Snack.svg');
@@ -204,11 +223,19 @@ class $AssetsImagesGen {
   /// File path: assets/images/checkbox2.svg
   SvgGenImage get checkbox2 => const SvgGenImage('assets/images/checkbox2.svg');
 
+  /// File path: assets/images/chevron-up.svg
+  SvgGenImage get chevronUp =>
+      const SvgGenImage('assets/images/chevron-up.svg');
+
   /// File path: assets/images/e5b9da75df2419d740dc72fee03a3f789400619c.png
   AssetGenImage get e5b9da75df2419d740dc72fee03a3f789400619c =>
       const AssetGenImage(
         'assets/images/e5b9da75df2419d740dc72fee03a3f789400619c.png',
       );
+
+  /// File path: assets/images/immunization.svg
+  SvgGenImage get immunization =>
+      const SvgGenImage('assets/images/immunization.svg');
 
   /// File path: assets/images/nap.svg
   SvgGenImage get nap => const SvgGenImage('assets/images/nap.svg');
@@ -221,6 +248,7 @@ class $AssetsImagesGen {
     a5332d31ac6cdbd6a5bfb62d59baefb6fb1383890,
     a6fadd07775295cc625abaf33feed2e172cf00a8c,
     a71311088a9687505b49ce50537c803aa86b5242c,
+    allergy,
     altArrowLeft,
     altArrowRight,
     arrowRight,
@@ -234,6 +262,7 @@ class $AssetsImagesGen {
     checkout,
     dietaryRestrictions,
     done,
+    emergencyContacts,
     gift,
     group,
     homeSmileFill,
@@ -246,6 +275,9 @@ class $AssetsImagesGen {
     medication,
     next,
     phoneRounded,
+    phoneRounded2,
+    physicalRequirements,
+    reportableDiseases,
     snack,
     subtract,
     subtract2,
@@ -265,7 +297,9 @@ class $AssetsImagesGen {
     backgroundUpcoming,
     bottle,
     checkbox2,
+    chevronUp,
     e5b9da75df2419d740dc72fee03a3f789400619c,
+    immunization,
     nap,
   ];
 }
