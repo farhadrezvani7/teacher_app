@@ -109,6 +109,9 @@ class $AssetsImagesGen {
   SvgGenImage get emergencyContacts =>
       const SvgGenImage('assets/images/Emergency Contacts.svg');
 
+  /// File path: assets/images/Gallery.png
+  AssetGenImage get gallery => const AssetGenImage('assets/images/Gallery.png');
+
   /// File path: assets/images/Gift.svg
   SvgGenImage get gift => const SvgGenImage('assets/images/Gift.svg');
 
@@ -182,6 +185,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/Phone Rounded2.svg
   SvgGenImage get phoneRounded2 =>
       const SvgGenImage('assets/images/Phone Rounded2.svg');
+
+  /// File path: assets/images/Photo.png
+  AssetGenImage get photo => const AssetGenImage('assets/images/Photo.png');
+
+  /// File path: assets/images/Photo2.png
+  AssetGenImage get photo2 => const AssetGenImage('assets/images/Photo2.png');
 
   /// File path: assets/images/Physical Requirements.svg
   SvgGenImage get physicalRequirements =>
@@ -324,6 +333,7 @@ class $AssetsImagesGen {
     done,
     edit,
     emergencyContacts,
+    gallery,
     gift,
     group,
     homeSmileFill,
@@ -344,6 +354,8 @@ class $AssetsImagesGen {
     next,
     phoneRounded,
     phoneRounded2,
+    photo,
+    photo2,
     physicalRequirements,
     plain,
     recordActivityPng,

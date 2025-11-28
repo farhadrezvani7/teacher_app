@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/features/activity/add_photo_screen.dart';
 import 'package:teacher_app/features/activity/record_activity_screen.dart';
 import 'package:teacher_app/features/home/widgets/background_widget.dart';
 import 'package:teacher_app/gen/assets.gen.dart';
@@ -94,7 +95,16 @@ class ActivityScreen extends StatelessWidget {
                         SizedBox(height: 8),
                         Assets.images.infoCard2.image(),
                         SizedBox(height: 8),
-                        Assets.images.infoCard3.image(),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => AddPhotoScreen(),
+                              ),
+                            );
+                          },
+                          child: Assets.images.infoCard3.image(),
+                        ),
                       ],
                     ),
                   ),
