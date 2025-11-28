@@ -13,15 +13,17 @@ class TabBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 48,
-        width: 48,
-        decoration: isActive
-            ? BoxDecoration(color: Color(0xffF9F5FF), shape: BoxShape.circle)
-            : null,
-        child: icon,
+    return Expanded(
+      child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onTap: onTap,
+        child: Container(
+          height: 48,
+          decoration: isActive
+              ? BoxDecoration(color: Color(0xffF9F5FF), shape: BoxShape.circle)
+              : null,
+          child: icon,
+        ),
       ),
     );
   }

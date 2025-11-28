@@ -192,7 +192,7 @@ class _CheckOutWidgetState extends State<CheckOutWidget> {
                   ),
 
                   SizedBox(height: 16),
-                  NoteWidget(),
+                  NoteWidget(title: 'Note', hintText: 'Placeholder'),
                   SizedBox(height: 20),
                   AttachPhotoWidget(),
                   SizedBox(height: 32),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:teacher_app/features/activity/activity_screen.dart';
 import 'package:teacher_app/features/home/widgets/appbar_widget.dart';
 import 'package:teacher_app/features/home/widgets/background_widget.dart';
 import 'package:teacher_app/features/home/widgets/bottom_navigation_bar_widget.dart';
 import 'package:teacher_app/features/home/widgets/card_widget.dart';
 import 'package:teacher_app/features/home/widgets/profile_section_widget.dart';
+import 'package:teacher_app/features/messages/messages_screen.dart';
 import 'package:teacher_app/features/time_screen/time_screen.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -40,6 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           } else if (value == 1) {
             return TimeScreen();
+          } else if (value == 2) {
+            return ActivityScreen();
+          } else if (value == 3) {
+            return MessagesScreen();
           } else {
             return Container();
           }

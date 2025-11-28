@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class NoteWidget extends StatefulWidget {
-  const NoteWidget({super.key});
+  final String title;
+  final String hintText;
+  const NoteWidget({super.key, required this.title, required this.hintText});
 
   @override
   State<NoteWidget> createState() => _NoteWidgetState();
@@ -15,7 +17,7 @@ class _NoteWidgetState extends State<NoteWidget> {
       crossAxisAlignment: .start,
       children: [
         Text(
-          'Note',
+          widget.title,
           style: TextStyle(
             color: Color(0xff444349),
             fontSize: 14,
@@ -45,7 +47,7 @@ class _NoteWidgetState extends State<NoteWidget> {
               minLines: null,
               onEditingComplete: () {},
               decoration: InputDecoration(
-                hintText: 'Placeholder',
+                hintText: widget.hintText,
                 filled: true,
                 fillColor: Color(0xffF7F7F8),
                 border: InputBorder.none,

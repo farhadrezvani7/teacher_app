@@ -102,6 +102,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/Done.svg
   SvgGenImage get done => const SvgGenImage('assets/images/Done.svg');
 
+  /// File path: assets/images/Edit.svg
+  SvgGenImage get edit => const SvgGenImage('assets/images/Edit.svg');
+
   /// File path: assets/images/Emergency Contacts.svg
   SvgGenImage get emergencyContacts =>
       const SvgGenImage('assets/images/Emergency Contacts.svg');
@@ -126,6 +129,34 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/Image.png
   AssetGenImage get image => const AssetGenImage('assets/images/Image.png');
+
+  /// File path: assets/images/Info Card.png
+  AssetGenImage get infoCardPng =>
+      const AssetGenImage('assets/images/Info Card.png');
+
+  /// File path: assets/images/Info Card.svg
+  SvgGenImage get infoCardSvg =>
+      const SvgGenImage('assets/images/Info Card.svg');
+
+  /// File path: assets/images/Info Card2.png
+  AssetGenImage get infoCard2 =>
+      const AssetGenImage('assets/images/Info Card2.png');
+
+  /// File path: assets/images/Info Card3.png
+  AssetGenImage get infoCard3 =>
+      const AssetGenImage('assets/images/Info Card3.png');
+
+  /// File path: assets/images/Info Card4.png
+  AssetGenImage get infoCard4 =>
+      const AssetGenImage('assets/images/Info Card4.png');
+
+  /// File path: assets/images/Info Card5.png
+  AssetGenImage get infoCard5 =>
+      const AssetGenImage('assets/images/Info Card5.png');
+
+  /// File path: assets/images/Info Card6.png
+  AssetGenImage get infoCard6 =>
+      const AssetGenImage('assets/images/Info Card6.png');
 
   /// File path: assets/images/Left Slot items.svg
   SvgGenImage get leftSlotItems =>
@@ -156,9 +187,30 @@ class $AssetsImagesGen {
   SvgGenImage get physicalRequirements =>
       const SvgGenImage('assets/images/Physical Requirements.svg');
 
+  /// File path: assets/images/Plain.svg
+  SvgGenImage get plain => const SvgGenImage('assets/images/Plain.svg');
+
+  /// File path: assets/images/Record Activity.png
+  AssetGenImage get recordActivityPng =>
+      const AssetGenImage('assets/images/Record Activity.png');
+
+  /// File path: assets/images/Record Activity.svg
+  SvgGenImage get recordActivitySvg =>
+      const SvgGenImage('assets/images/Record Activity.svg');
+
   /// File path: assets/images/Reportable Diseases.svg
   SvgGenImage get reportableDiseases =>
       const SvgGenImage('assets/images/Reportable Diseases.svg');
+
+  /// File path: assets/images/Restart.svg
+  SvgGenImage get restart => const SvgGenImage('assets/images/Restart.svg');
+
+  /// File path: assets/images/Secondary.svg
+  SvgGenImage get secondary => const SvgGenImage('assets/images/Secondary.svg');
+
+  /// File path: assets/images/Secondary2.svg
+  SvgGenImage get secondary2 =>
+      const SvgGenImage('assets/images/Secondary2.svg');
 
   /// File path: assets/images/Snack.svg
   SvgGenImage get snack => const SvgGenImage('assets/images/Snack.svg');
@@ -227,6 +279,14 @@ class $AssetsImagesGen {
   SvgGenImage get chevronUp =>
       const SvgGenImage('assets/images/chevron-up.svg');
 
+  /// File path: assets/images/date-icon.png
+  AssetGenImage get dateIconPng =>
+      const AssetGenImage('assets/images/date-icon.png');
+
+  /// File path: assets/images/date-icon.svg
+  SvgGenImage get dateIconSvg =>
+      const SvgGenImage('assets/images/date-icon.svg');
+
   /// File path: assets/images/e5b9da75df2419d740dc72fee03a3f789400619c.png
   AssetGenImage get e5b9da75df2419d740dc72fee03a3f789400619c =>
       const AssetGenImage(
@@ -262,6 +322,7 @@ class $AssetsImagesGen {
     checkout,
     dietaryRestrictions,
     done,
+    edit,
     emergencyContacts,
     gift,
     group,
@@ -269,6 +330,13 @@ class $AssetsImagesGen {
     homeSmileOutline,
     iconButton,
     image,
+    infoCardPng,
+    infoCardSvg,
+    infoCard2,
+    infoCard3,
+    infoCard4,
+    infoCard5,
+    infoCard6,
     leftSlotItems,
     lunch,
     mailbox,
@@ -277,7 +345,13 @@ class $AssetsImagesGen {
     phoneRounded,
     phoneRounded2,
     physicalRequirements,
+    plain,
+    recordActivityPng,
+    recordActivitySvg,
     reportableDiseases,
+    restart,
+    secondary,
+    secondary2,
     snack,
     subtract,
     subtract2,
@@ -298,6 +372,8 @@ class $AssetsImagesGen {
     bottle,
     checkbox2,
     chevronUp,
+    dateIconPng,
+    dateIconSvg,
     e5b9da75df2419d740dc72fee03a3f789400619c,
     immunization,
     nap,

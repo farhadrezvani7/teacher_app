@@ -31,7 +31,6 @@ class _ChildProfileScreenState extends State<ChildProfileScreen> {
                   SmoothTabs(
                     onChange: (index) {
                       tabIndex.value = index;
-                      print("Selected Tab: $index");
                     },
                   ),
                   SizedBox(height: 12),

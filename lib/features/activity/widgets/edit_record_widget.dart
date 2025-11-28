@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:teacher_app/core/widgets/button_widget.dart';
 import 'package:teacher_app/core/widgets/lifecycle_event_handler.dart';
-import 'package:teacher_app/features/child_status/widgets/attach_photo_widget.dart';
 import 'package:teacher_app/features/child_status/widgets/header_check_out_widget.dart';
 import 'package:teacher_app/features/child_status/widgets/note_widget.dart';
-import 'package:teacher_app/gen/assets.gen.dart';
 
-class AddNoteWidget extends StatefulWidget {
-  const AddNoteWidget({super.key});
+class EditRecordWidget extends StatefulWidget {
+  const EditRecordWidget({super.key});
 
   @override
-  State<AddNoteWidget> createState() => _AddNoteWidgetState();
+  State<EditRecordWidget> createState() => _EditRecordWidgetState();
 }
 
-class _AddNoteWidgetState extends State<AddNoteWidget> {
+class _EditRecordWidgetState extends State<EditRecordWidget> {
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -44,54 +42,49 @@ class _AddNoteWidgetState extends State<AddNoteWidget> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      controller: _scrollController,
       padding: EdgeInsets.only(
         bottom: MediaQuery.of(context).viewInsets.bottom,
       ),
       child: Container(
         decoration: BoxDecoration(
           color: Color(0xffFFFFFF),
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
           boxShadow: [
             BoxShadow(
+              color: Color(0xff95939D).withValues(alpha: .2),
               blurRadius: 16,
               offset: Offset(0, -4),
-              color: Color(0xff95939D).withValues(alpha: .2),
             ),
           ],
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         ),
         child: Column(
+          crossAxisAlignment: .start,
           children: [
-            HeaderCheckOut(isIcon: false, title: 'Add Note'),
+            HeaderCheckOut(isIcon: false, title: 'Edit Record'),
             Divider(color: Color(0xffDBDADD)),
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: .start,
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(shape: .circle),
-                        child: Assets.images.image.image(),
-                      ),
-                      SizedBox(width: 8),
-                      Text(
-                        'Henry Davis',
-                        style: TextStyle(
-                          color: Color(0xff444349),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
+                  Text(
+                    'You can edit the following text',
+                    style: TextStyle(
+                      color: Color(0xff444349),
+                      fontSize: 20,
+                      fontWeight: .w600,
+                    ),
                   ),
                   SizedBox(height: 32),
-                  NoteWidget(title: 'Note', hintText: 'Placeholder'),
-                  SizedBox(height: 20),
-                  AttachPhotoWidget(),
+                  NoteWidget(
+                    title: 'Transcribed Text',
+                    hintText:
+                        'Sophia had half of the granola bar and half of the gapes for PM snack',
+                  ),
                   SizedBox(height: 32),
                   ButtonWidget(
-                    title: 'Save & Check In',
+                    title: 'Save & Change',
                     onTap: () {
                       Navigator.pop(context);
                     },

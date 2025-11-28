@@ -15,7 +15,7 @@ class TimeScreen extends StatelessWidget {
         BackgroundWidget(),
         SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: .start,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -35,7 +35,7 @@ class TimeScreen extends StatelessWidget {
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xffFFFFFF).withValues(alpha: .7),
+                    color: Color(0xffFFFFFF),
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20),
                       topLeft: Radius.circular(20),
@@ -44,7 +44,7 @@ class TimeScreen extends StatelessWidget {
                       BoxShadow(
                         offset: Offset(0, -4),
                         blurRadius: 16,
-                        color: Color(0xff95939D).withValues(alpha: .2),
+                        color: Color(0xff000000).withValues(alpha: .1),
                       ),
                     ],
                   ),
